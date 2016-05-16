@@ -61,7 +61,7 @@ table {
 body {
 	width: 100%;
 	height: auto;
-	font-size: 32px;
+	font-size: 35px;
 }
 #page-content {
 	max-width: 1366px;
@@ -85,6 +85,7 @@ div#page-header #text {
 div#page-header #text p {
 	margin-bottom: 1em;
 	font-family: champagne__limousinesregular;
+	margin: 0 6%;
 }
 
 /* MOBILE - iPHONE */
