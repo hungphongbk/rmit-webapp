@@ -1,12 +1,12 @@
 
 @font-face {
     font-family: 'champagne__limousinesregular';
-    src: url('champagne__limousines-webfont.eot');
-    src: url('champagne__limousines-webfont.eot?#iefix') format('embedded-opentype'),
-         url('champagne__limousines-webfont.woff2') format('woff2'),
-         url('champagne__limousines-webfont.woff') format('woff'),
-         url('champagne__limousines-webfont.ttf') format('truetype'),
-         url('champagne__limousines-webfont.svg#champagne__limousinesregular') format('svg');
+    src: url('fonts/Champagne & Limousines_webfont/champagne__limousines-webfont.eot');
+    src: url('fonts/Champagne & Limousines_webfont/champagne__limousines-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Champagne & Limousines_webfont/champagne__limousines-webfont.woff2') format('woff2'),
+         url('fonts/Champagne & Limousines_webfont/champagne__limousines-webfont.woff') format('woff'),
+         url('fonts/Champagne & Limousines_webfont/champagne__limousines-webfont.ttf') format('truetype'),
+         url('fonts/Champagne & Limousines_webfont/champagne__limousines-webfont.svg#champagne__limousinesregular') format('svg');
     font-weight: normal;
     font-style: normal;
 
@@ -84,6 +84,7 @@ div#page-header #text {
 }
 div#page-header #text p {
 	margin-bottom: 1em;
+	font-family: champagne__limousinesregular;
 }
 
 /* MOBILE - iPHONE */
