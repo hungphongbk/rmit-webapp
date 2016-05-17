@@ -73,98 +73,6 @@ table {
 
 /* OUR CODE */
 
-
-
-
-
-	
-
-/* MOBILE - iPHONE */
-@media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 667px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (orientation: portrait) { 
-
-body {
-	width: 100%;
-	height: auto;
-	font-size: 2.4vw;
-}
-#page-content {
-	max-width: 667px;
-	margin: 0 auto;
-}
-#page-header > .section	{
-	width: 100%;
-}
-div#page-header {
-	background-image: url('img/Des/firstpage.png');
-	-webkit-background-size: contain;
-	background-size: contain;
-	height: 130.6vw;
-	background-repeat: no-repeat;
-}
-div#page-header #text {
-	margin: 0 20%;
-	padding-top: 100%;
-	text-align: justify;
-}
-
-div#page-header #text p {
-	margin-bottom: 1em;
-	font-family: 'gandhi_serifregular' ;
-	line-height: 1.1em;
-}
-
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-}
-
-li {
-    float: left;
-}
-
-li a {
-    display: block;
-    color: #0000;
-    text-align: right;
-    padding: 14px 30px;
-    text-decoration: none;
-	border-bottom: 5px solid rgba(0,0,0,0);
-}
-
-li a.pl{
-	background-image: url('img/Mobi/nav1.png')
-}
-
-.navigation {
-	display: inline-block;
-}
-
-
-	/* do stuff here */
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* DESKTOP */
 body {
 	width: 100%;
@@ -179,7 +87,7 @@ body {
 	width: 100%;
 }
 div#page-header {
-	background-image: url('img/Des/firstpage.png');
+	background-image: url('img/1pg-of-desktop.png');
 	-webkit-background-size: contain;
 	background-size: contain;
 	height: 130.6vw;
@@ -377,6 +285,79 @@ li a:hover {
 	top: 50.83%;
 }
 
+}
+
+/* MOBILE - iPHONE */
+/*
+Anh note lại một chút về những chỉnh sửa trong file css này và nguyên nhân để em hiểu nhé :v
+css cho body chỉ còn thuộc tính font-size: 16px. width=100% và height=auto mặc định đã định nghĩa ở trên rồi
+  xuống dưới không cần định nghĩa lại, chỉ override fontsize thôi
+  vì những css selector mà không nằm trong thẻ media nào, mặc định apply trên tất cả các thiết bị
+  và css override theo thứ tự từ trên xuống dưới, do đó chỉ cần thay dổi font trong media cho mobile là đủ
+#page-header anh chỉ tăng height lên (vì nếu xoá height đi để apply height phía trên thì trông trang web hơi buồn cười @@)
+#page-header #text chỉnh lại canh lề hai bên cho đúng với đặc trưng layout của mobile (margin = 16px là ổn)
+Cứ theo nguyên tắc override đó mà em tiếp tục chỉnh sửa css bên trong media mobile (và xoá bớt những thuộc tính không cần override lại
+  cho css đỡ dài dòng nhé :v)
+*/
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) { 
+
+  body {
+    font-size: 16px;
+  }
+  #page-content {
+    max-width: 667px;
+    margin: 0 auto;
+  }
+  #page-header > .section {
+    width: 100%;
+  }
+  div#page-header {
+    height: 160vw;
+  }
+  div#page-header #text {
+    margin: 0 16px;
+  }
+
+  div#page-header #text p {
+    margin-bottom: 1em;
+    font-family: 'gandhi_serifregular' ;
+    line-height: 1.1em;
+  }
+
+  ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+  }
+
+  li {
+      float: left;
+  }
+
+  li a {
+      display: block;
+      color: #0000;
+      text-align: right;
+      padding: 14px 30px;
+      text-decoration: none;
+    border-bottom: 5px solid rgba(0,0,0,0);
+  }
+
+  li a.pl{
+    background-image: url('img/Mobi/nav1.png')
+  }
+
+  .navigation {
+    display: inline-block;
+  }
+
+
+  /* do stuff here */
 }
 
 /* FOR IMAC */
