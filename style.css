@@ -1,17 +1,22 @@
-
 @font-face {
-    font-family: 'champagne__limousinesregular';
-    src: url('fonts/Champagne & Limousines_webfont/champagne__limousines-webfont.eot');
-    src: url('fonts/Champagne & Limousines_webfont/champagne__limousines-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/Champagne & Limousines_webfont/champagne__limousines-webfont.woff2') format('woff2'),
-         url('fonts/Champagne & Limousines_webfont/champagne__limousines-webfont.woff') format('woff'),
-         url('fonts/Champagne & Limousines_webfont/champagne__limousines-webfont.ttf') format('truetype'),
-         url('fonts/Champagne & Limousines_webfont/champagne__limousines-webfont.svg#champagne__limousinesregular') format('svg');
+    font-family: 'gandhi_serifregular';
+    src: url('fonts/gandhiserif-regular-webfont.woff2') format('woff2'),
+         url('fonts/gandhiserif-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
 }
-/* CSS RESET */
+
+@font-face {
+    font-family: 'droid_sansregular';
+    src: url('fonts/droidsans-webfont.woff2') format('woff2'),
+         url('fonts/droidsans-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/* CSS RESET dong bo hoa */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -33,6 +38,7 @@ time, mark, audio, video {
 	vertical-align: baseline;
 	box-sizing: border-box;
 }
+
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
@@ -57,14 +63,41 @@ table {
 	border-spacing: 0;
 }
 
+.clearfix:after {
+   content: " "; /* Older browser do not support empty content */
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
+}
+
 /* OUR CODE */
+
+
+
+
+
+	
+
+/* MOBILE - iPHONE */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) { 
+	/* do stuff here */
+}
+
+
+
+/* DESKTOP */
 body {
 	width: 100%;
 	height: auto;
-	font-size: 32px;
+	font-size: 2.4vw;
 }
 #page-content {
-	max-width: 1366px;
+	max-width: 1280px;
 	margin: 0 auto;
 }
 #page-header > .section	{
@@ -74,26 +107,91 @@ div#page-header {
 	background-image: url('img/1pg-of-desktop.gif');
 	-webkit-background-size: contain;
 	background-size: contain;
-	height: 2800px;
+	height: 130.6vw;
 	background-repeat: no-repeat;
 }
 div#page-header #text {
-	margin: 0 15%;
-	padding-top: 125%;
+	margin: 0 20%;
+	padding-top: 100%;
 	text-align: justify;
 }
+
 div#page-header #text p {
 	margin-bottom: 1em;
-	font-family: champagne__limousinesregular;
+	font-family: 'gandhi_serifregular' ;
+	line-height: 1.1em;
 }
 
-/* MOBILE - iPHONE */
-@media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 667px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (orientation: portrait) { 
+div#texture {
+	/*position: absolute;*/
+	/*top: 115%;*/
+	background-color: 
+}  
+
+.section img {
+	width: 100%;
 }
+.section {
+    background-color: #F1ECED;
+    text-align: center;
+}
+.section img.logo {
+	width: 36%;
+	margin: 0 32%;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: #008800;
+    text-align: right;
+    padding: 14px 16px;
+    text-decoration: none;
+border-bottom: 5px solid rgba(0,0,0,0);
+}
+
+li a:hover {
+    border-bottom: 5px solid rgba(0,0,0,0.6);
+}
+.navigation {
+	display: inline-block;
+}
+
+.image-wrapper {
+	padding: 0 7px;
+	/*padding: padding-v padding-h;*/
+}
+.image-wrapper .item {
+	width: 50%;
+	padding: 7px;
+
+	float: left;
+	position: relative;
+	overflow: hidden;
+}
+.image-wrapper .item .description {
+	position: absolute;
+	left: 7px;
+	right: 7px;
+	top: 100%;
+
+	transition: top 0.25s ease-in;
+}
+.image-wrapper .item:hover .description {
+	top: 50.83%;
+}
+
+
 
 /* MOBILE - iPAD */
 @media only screen 
@@ -101,4 +199,11 @@ div#page-header #text p {
   and (max-device-width: 1024px) 
   and (orientation: portrait) 
   and (-webkit-min-device-pixel-ratio: 1) {
+}
+
+/* FOR IMAC */
+@media only screen and (min-device-width: 1280px) {
+	body {
+		font-size: 32px;
+	}
 }
